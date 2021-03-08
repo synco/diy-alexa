@@ -50,7 +50,7 @@ bool RecogniseCommandState::run()
     if (!m_speech_recogniser || !m_speech_recogniser->connected())
     {
         // no http client - something went wrong somewhere move to the next state as there's nothing for us to do
-        Serial.println("Error - Attempt to run with no http client");
+        Serial.println("Failed to connect to Wit.Ai");
         return true;
     }
     if (m_last_audio_position == -1)
